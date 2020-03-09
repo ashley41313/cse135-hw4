@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tables and Lists</title>
+        <link rel="stylesheet" type ="text/css" href="styles/main.css">
+
+        <style type="text/css">
+            #checkCSS{margin-top:1px; display:none;}
+        </style>
+    </head>
+    <body>
+        <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+        <img src="" id="myImg" width="1" height="1"/>
+
+        <!--to check if images are on-->
+        <input type="hidden" id="checkCSS" value="">
+
+        <!---this is the navigation bar-->
+        <nav>
+            <a href="index.html">Return to Homepage</a>
+            <br>
+            <a href="images.html">Images</a> <br>
+            <a href="form.html">Forms</a> <br>
+            <a href="externals.html">Externals</a>  <br>
+            <a href="https://analytics-a336c.firebaseapp.com/login">View Analytics</a>
+        </nav>
+        
+        <h1>My Schedule this week.</h1>
+
+        <table>
+            <caption>My week at a glance. Jan 20, 2020.</caption>
+
+            <colgroup>
+                <col style="background-color:rgb(201, 172, 255)">
+              </colgroup>
+            <thead>
+                <tr>
+                    <th>Sunday</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr class="sleep">
+                        <td>1 am: sleep</td>
+                        <td>1 am: sleep</td>
+                        <td>1 am: sleep</td>
+                        <td>1 am: sleep</td>
+                        <td>1 am: sleep</td>
+                        <td>1 am: sleep</td>
+                        <td rowspan="2">1 am: Sleep</td>
+                    </tr>
+                    <tr class="sleep">
+                        <td>2am: Sleep</td>
+                        <td>2am: Sleep</td>
+                        <td>2am: Sleep</td>
+                        <td>2am: Sleep</td>
+                        <td>2am: Sleep</td>
+                        <td>2am: Sleep</td>
+                    </tr>
+                    <tr class="sleep">
+                        <td>3am: Sleep</td>
+                        <td>3am: Sleep</td>
+                        <td>3am: Sleep</td>
+                        <td>3am: Sleep</td>
+                        <td>3am: Sleep</td>
+                        <td>3am: Sleep</td>
+                        <td>3am: Sleep</td>
+                    </tr>
+                    <tr class="sleep">
+                        <td>4am: Sleep</td>
+                        <td>4am: Sleep</td>
+                        <td>4am: Sleep</td>
+                        <td>4am: Sleep</td>
+                        <td>4am: Sleep</td>
+                        <td>4am: Sleep</td>
+                        <td>4am: Sleep</td>
+                    </tr>
+                    <tr class="sleep"> 
+                        <td>5am: Sleep</td>
+                        <td>5am: Sleep</td>
+                        <td>5am: Sleep</td>
+                        <td>5am: Sleep</td>
+                        <td>5am: Sleep</td>
+                        <td>5am: Sleep</td>
+                        <td>5am: Sleep</td>
+                    </tr>
+                    <tr class="sleep">
+                        <td>6am: Sleep</td>
+                        <td>6am: Sleep</td>
+                        <td>6am: Sleep</td>
+                        <td>6am: Sleep</td>
+                        <td>6am: Sleep</td>
+                        <td>6am: Sleep</td>
+                        <td>6am: Sleep</td>
+                    </tr>
+                    <tr class="sleep"> 
+                        <td>7am: Sleep</td>
+                        <td>7am: Sleep</td>
+                        <td>7am: Sleep</td>
+                        <td>7am: Sleep</td>
+                        <td>7am: Sleep</td>
+                        <td>7am: Sleep</td>
+                        <td>7am: Sleep</td>
+                    </tr>
+                <tr>
+                    <td>8am:</td>
+                    <td>8am:</td>
+                    <td>8am:</td>
+                    <td class="class">8am: CSE 135 *so sleepy*</td>
+                    <td>8am:</td>
+                    <td class="class">8am: CSE 135 *im shleep*</td>
+                    <td>8am:</td>
+                </tr>
+                <tr>
+                    <td>9am:</td>
+                    <td>9am:</td>
+                    <td>9am:</td>
+                    <td>9am:</td>
+                    <td>9am:</td>
+                    <td>9am:</td>
+                    <td>9am:</td>
+                </tr>
+                <tr>
+                    <td>10am:</td>
+                    <td>10am:</td>
+                    <td>10am:</td>
+                    <td>10am:</td>
+                    <td>10am:</td>
+                    <td>10am:</td>
+                    <td>10am:</td>
+                </tr>
+                <tr>
+                    <td>11am:</td>
+                    <td>11am:</td>
+                    <td class="class">11am: CSE 140</td>
+                    <td>11am:</td>
+                    <td class="class">11am: CSE 140</td>
+                    <td>11am:</td>
+                    <td>11am:</td>
+                </tr>
+                <tr>
+                    <td>Noon:</td>
+                    <td>Noon:</td>
+                    <td>Noon:</td>
+                    <td>Noon:</td>
+                    <td>Noon:</td>
+                    <td>Noon:</td>
+                    <td>Noon:</td>
+                </tr>
+                <tr>
+                    <td>1 pm:</td>
+                    <td>1 pm:</td>
+                    <td class="class">1 pm: VIS 84</td>
+                    <td>1 pm:</td>
+                    <td class="class">1 pm: VIS 84</td>
+                    <td>1 pm:</td>
+                    <td>1 pm:</td>
+                </tr>
+                <tr>
+                    <td>2 pm:</td>
+                    <td>2 pm:</td>
+                    <td>2 pm:</td>
+                    <td>2 pm:</td>
+                    <td>2 pm:</td>
+                    <td>2 pm:</td>
+                    <td>2 pm:</td>
+                </tr>
+                <tr>
+                    <td>3 pm:</td>
+                    <td>3 pm:</td>
+                    <td>3 pm:</td>
+                    <td class="class">3 pm: CSE 101 so bored</td>
+                    <td>3 pm:</td>
+                    <td class="class">3 pm: CSE 101 quiz !!</td>
+                    <td>3 pm:</td>
+                </tr>
+                <tr>
+                    <td>4 pm:</td>
+                    <td>4 pm:</td>
+                    <td>4 pm:</td>
+                    <td>4 pm:</td>
+                    <td>4 pm:</td>
+                    <td>4 pm:</td>
+                    <td>4 pm:</td>
+                </tr>
+                <tr>
+                    <td>5 pm:</td>
+                    <td>5 pm:</td>
+                    <td>5 pm:</td>
+                    <td>5 pm:</td>
+                    <td>5 pm:</td>
+                    <td>5 pm:</td>
+                    <td>5 pm:</td>
+                </tr>
+                <tr>
+                    <td>6 pm:</td>
+                    <td>6 pm:</td>
+                    <td>6 pm:</td>
+                    <td>6 pm:</td>
+                    <td>6 pm:</td>
+                    <td>6 pm:</td>
+                    <td>6 pm:</td>
+                </tr>
+                <tr>
+                    <td>7 pm:</td>
+                    <td>7 pm:</td>
+                    <td>7 pm:</td>
+                    <td>7 pm:</td>
+                    <td>7 pm:</td>
+                    <td>7 pm:</td>
+                    <td>7 pm:</td>
+                </tr>
+                <tr>
+                    <td>8 pm:</td>
+                    <td>8 pm:</td>
+                    <td>8 pm:</td>
+                    <td>8 pm:</td>
+                    <td>8 pm:</td>
+                    <td>8 pm:</td>
+                    <td>8 pm:</td>
+                </tr>
+                <tr class="cry">
+                    <td>9 pm: Cry</td>
+                    <td>9 pm: Cry</td>
+                    <td>9 pm: Cry</td>
+                    <td>9 pm: Cry</td>
+                    <td>9 pm: Cry</td>
+                    <td>9 pm: Cry</td>
+                    <td>9 pm: Cry</td>
+                </tr>
+                <tr class="cry">
+                    <td>10 pm: Cry</td>
+                    <td>10 pm: Cry</td>
+                    <td>10 pm: Cry</td>
+                    <td>10 pm: Cry</td>
+                    <td>10 pm: Cry</td>
+                    <td>10 pm: Cry</td>
+                    <td>10 pm: Cry</td>
+                </tr>
+                <tr class="cry">
+                    <td>11pm: Cry</td>
+                    <td>11pm: Cry</td>
+                    <td>11pm: Cry</td>
+                    <td>11pm: Cry</td>
+                    <td>11pm: Cry</td>
+                    <td>11pm: Cry</td>
+                    <td>11pm: Cry</td>
+                </tr>
+                <tr class="cry">
+                    <td>Midnight: cry</td>
+                    <td>Midnight: cry</td>
+                    <td>Midnight: cry</td>
+                    <td>Midnight: cry</td>
+                    <td>Midnight: cry</td>
+                    <td>Midnight: cry</td>
+                    <td>Midnight: cry</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="7">I cry every single day</td>
+                </tr>
+            </tfoot>
+        </table>
+
+
+        <h2>Terms I'm learning this week:</h2>
+        <dl>
+            <dt>Purushartha</dt>
+            <dd>the 4 aims of human life</dd>
+
+            <dt>Dharma</dt>
+            <dd>means truth, the right way of living, and human behaviors considered necessary for the order of things in the world. brings stability and order, a life that is lawful and harmonious, and the striving to do the right thing, to be virtuous, to be helpful to others, and to interact successfully with society. you automatically know what to do in any situation, you are in harmony with and your life is supported by everything around you, you feel complete within yourself, and life becomes effortless.</dd>
+        
+            <dt>Artha</dt>
+            <dd> the security of having the material comfort you need to live in the world with ease. one of the basic human dignities—to have enough assets to live on and care for your family, without hoarding or being greedy. Artha guides you to ask the question, “What do I see as truly valuable?” Discover a way so money runs after you and not vice versa. the fear of not having, disguises the reality that we have everything. </dd>
+            
+            <dt>Kama</dt>
+            <dd>relates to this pleasure, which can be sensuality, but is also art, music, beauty, love, intimacy, affection, fellowship, and kindness—it’s what brings a sense of delight to your life. However, excessive Kama can lead to overindulgence, addiction, sloth, greed, and lust. To practice Kama from a yogic perspective means to practice being fully present with whatever you’re experiencing. Kama is a total sensory experience that includes discovering the object, learning about the object, establishing emotional connection, learning the process of enjoyment, and experiencing the resulting feeling of well-being before, during, and after the experience.</dd>
+
+            <dt>Moksha</dt>
+            <dd>is your true nature—it’s who you really are. Freedom from the cycle of death and rebirth. Freedom from ignorance. Liberation. self-discipline that is so perfect that it becomes unconscious, second nature, an unworldly understanding, and a state of bliss. This liberation comes from a life lived with inner purity, alert mind, led by reason, intelligence, and realization of the Supreme Self who dwells in all beings. </dd>
+        </dl>
+
+        <h2>Tasks I have to do:</h2>
+        <h3>How I NEED to be doing them: </h3>
+        <ol>
+            <li>This assignment.</li>
+            <li>CSE 101 Homework</li>
+            <li>Film homework</li>
+            <li>Studying for next weeks midterms</li>
+            <li>Drawing, painting, living my life.</li>
+        </ol>
+          
+        <h3>How I wish I could do them:</h3>
+        <ol>
+            <li>Drawing, painting, living my life.</li>
+            <li>...</li>
+            <li>... don't wanna do it</li>
+        </ol>
+
+        <h4>Random things I'd like to do:</h4>
+        <ul>
+            <li>Get coffee</li>
+            <li>Visit Michelle</li>
+            <li>Go to a show</li>
+            <li>Spend some time at the beach</li>
+            <li>Listen to more music</li>
+            <li>Read some of my book</li>
+        </ul>
+
+        <!--Will display the reported data-->
+        <section id="reporter"> </section>
+        <script src="./save.js"></script> 
+
+    </body>
+</html>

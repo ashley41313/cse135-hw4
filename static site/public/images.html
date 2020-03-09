@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Images</title>
+        <style type="text/css">
+            #checkCSS{margin-top:1px; display:none;}
+            section {
+                overflow-y: auto;
+                height: 500px;
+                background-color: aqua;
+            }
+
+            button {
+                height: 50px;
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+        <img src="" id="myImg" width="1" height="1"/>
+
+        <!--to check if images are on-->
+        <input type="hidden" id="checkCSS" value="">
+
+        <!---this is the navigation bar-->
+        <nav>
+            <a href="index.html">Return to Homepage</a>
+            <br>
+            <a href="form.html">Forms</a> <br>
+            <a href="table_and_lists.html">Tables and Lists</a> <br>
+            <a href="externals.html">Externals</a> <br>
+            <a href="reportertest.html">View Data Collection Report</a><br>
+            <a href="https://analytics-a336c.firebaseapp.com/login">View Analytics</a>
+        </nav>
+
+        <H1 id="test">A Variety of Images.</H1>
+
+        <!---these are various types of images-->
+        <img src="files/animated.gif" alt="regular gif" height="500">
+        <p>GIF</p>
+
+        <img src="files/meganfox.gif" alt="animated gif" height="300">
+        <p> Animated GIF</p>
+
+        <img src="files/jean.jpg" alt="jpeg" height="600">
+        <p>JPEG</p>
+
+        <img src="files/lindsay.png" alt="png" height="500">
+        <p>PNG</p>
+
+        <img src="files/butterfly.png" alt="animated png" height="500">
+        <p>Animated PNG</p>
+
+        <img src="files/tree.webp" alt="WebP" height="350">
+        <p>WebP</p>
+
+        <img src="files/smily.svg" alt="SVG" height="900">
+        <p>SVG</p>
+
+        <!--Will display the reported data-->
+        <section id="reporter"> </section>
+
+        <script src="./save.js"></script> 
+
+    </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Externals</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica%20Neue:400,%20400,400italic,700,700italic">
+        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/837599/p5.speech.js"></script>
+
+        <style type="text/css">
+            #checkCSS{margin-top:1px; display:none;}
+        </style>
+
+    </head>
+
+    <body>
+        <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+        <img src="" id="myImg" width="1" height="1"/>
+
+        <!--to check if images are on-->
+        <input type="hidden" id="checkCSS" value="">
+
+        <!---this is the navigation bar-->
+        <nav>
+            <a href="index.html">Return to Homepage</a>
+            <br>
+            <a href="images.html">Images</a> <br>
+            <a href="table_and_lists.html">Tables and Lists</a> <br>
+            <a href="form.html">Forms</a> <br>
+            <a href="reportertest.html">View Data Collection Report</a> <br>
+            <a href="https://analytics-a336c.firebaseapp.com/login">View Analytics</a>
+        </nav>
+
+        Do this:<br>
+        <iframe src="http://rawrclothing.com/how-to-be-emo-with-strict-parents/" width="400" height="400"></iframe> <br>
+        <iframe src="https://www.gotoquiz.com/are_you_emo_or_a_poser" width="400" height="400"></iframe> <br>
+
+        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FREMemberMac%2Fvideos%2F849846078797330%2F&show_text=0&width=560" width="560" height="308" style="border:none;overflow:hidden" ></iframe>
+        
+        <h1 style="font-family: Helvetica Neue">What a handsome man.</h1>
+        
+        <img src="https://i.pinimg.com/originals/da/5c/2b/da5c2bdd0175ab6241155d00f1c1bb0f.jpg" alt="kurt" width="300">
+        <img src="https://i.pinimg.com/originals/e0/f8/f1/e0f8f1e2317754f301ca2b383eacc0c2.jpg"  alt="kurt" width="300">
+        <img src="https://thefilmreview.com/wp-content/uploads/2012/10/laurence.jpg" alt="lawrence anyways" width="300">
+
+        <hr>
+        <a href="https://www.nme.com/photos/the-c-2378287">I listen to the cure I listen to the Cure I listen to th</a>
+        <br>
+        <a href="https://www.redfin.com/CA/Joshua-Tree/4741-Avenida-Del-Sol-92252/home/3829685">I want a home.</a>
+        <br>
+        <a href="https://www.tumblr.com/search/westfalia">Maybe I don't.</a> <br>
+        <a href="https://science.howstuffworks.com/space-conspiracy-theory8.htm">Are they crazy.</a> <br>
+        <a href="https://genius.com/Miley-cyrus-7-things-lyrics">Hey I'm distracted</a>
+
+        <h3>The load times of this page:</h3>
+        <ol>
+            <li>DOMContentLoaded: 3.30 s
+                Load: 3.44 s</li>
+            <li>DOMContentLoaded: 3.93 s
+                Load: 4.21 s</li>
+            <li>DOMContentLoaded: 2.75 s
+                Load: 2.74 s</li>
+            <li>DOMContentLoaded: 3.79 s
+                Load: 3.79 s</li>
+            <li>DOMContentLoaded: 3.09 s
+                Load: 3.09 s</li>
+            <li>DOMContentLoaded: 2.45 s
+                Load: 3.13 s</li>
+            <li>DOMContentLoaded: 3.85 s
+                Load: 3.85 s</li>
+            <li>DOMContentLoaded: 3.30 s
+                Load: 3.84 s</li>
+            <li>DOMContentLoaded: 4.74 s
+                Load: 4.74 s</li>
+            <li>DOMContentLoaded: 2.99 s
+                Load: 2.99 s</li>
+
+        </ol>
+
+        <br>
+        <h2>This box runs two external scripts. Click and have audio on.</h2>
+
+
+
+        <script>
+            var speech = new p5.Speech();
+
+            function setup(){
+                createCanvas(200, 200);
+                background(32);
+                fill(255);
+                textSize(36);
+                textAlign(CENTER);
+                text('CLICK ME', width/2, height/2);
+            }
+
+            function mouseClicked(){
+                speech.speak('Its a strange life!');
+            }
+
+            function setup(){
+            createCanvas(500, 500);
+            background(64);
+            }
+            
+            function draw(){
+                fill(255);
+                ellipse(mouseX, mouseY, 20, 20);
+            }
+        </script>
+        <script src="./save.js"></script> 
+    </body>
+</html>

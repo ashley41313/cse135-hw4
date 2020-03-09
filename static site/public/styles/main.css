@@ -1,0 +1,87 @@
+body {
+    background-image: url(../files/desert.jpg);
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}
+
+a {
+  padding-left: 10px;
+}
+
+nav {
+  background-color: #fff;
+}
+
+img {
+    width: 300px;
+}
+
+.info {
+  background-color: black;
+  color: #fff;
+}
+
+.sleep {
+    background-color: black;
+    color: #fff;
+}
+
+.class {
+    background-color: crimson;
+    color: #fff;
+}
+
+.cry {
+    background-color: darkmagenta;
+    color: #fff;
+}
+
+canvas {
+padding-left: 100px;
+}
+
+
+table, th, td {
+    border: 1px solid brown;
+    margin-left:auto; 
+    margin-right:auto;
+  }
+
+  table, dl {
+    width: 500px;
+  }
+  
+  th {
+    height: 50px;
+  }
+
+
+  th, td {
+    padding: 15px;
+    text-align: left;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+  
+  dl, ol, ul {
+      background-color: #000;
+      color: #fff;
+  }
+
+  iframe {
+    width: 700;
+  }
+
+  #map {
+    width: 500px;
+    height: 500px;
+    border: thin solid black;
+  }
+

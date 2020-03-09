@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body>
+        <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+        <!--sessionize the user-->
+        <img src="" id="myImg" width="1" height="1"/>
+
+        <input type="hidden" id="checkCSS" value="">
+
+        <div class="info">
+            <pre>1999 - ??</pre>
+
+            <nav>
+                <a href="images.html">Images</a> <br>
+                <a href="form.html">Form</a> <br>
+                <a href="table_and_lists.html">Table and Lists</a> <br>
+                <a href="externals.html">Externals</a> <br>
+                <a href="reportertest.html">View Data Collection Report</a><br/>
+                <a href="https://analytics-a336c.firebaseapp.com/login">View Analytics</a>
+            </nav>
+
+            <header>
+                <h1>Ashley Salazar</h1>
+                <h2>I am from Joshua Tree, California :-)</h2>
+                <h3>Favorite quote: Wherever you look, you see what you're looking for.</h3>
+            </header>
+    
+            <main> 
+                <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+                    <input type="range" id="b" name="b" value="20" /> +
+                    <input type="number" id="a" name="a" value="10" /> =
+                    <output name="result" for="a b">30</output>
+                </form>
+                <code>Slide to your age, the resultant value is how old you'll be in 10 years.</code>
+            </main>
+        
+            <hr/>
+
+            <section>
+                <img src="files/surfcurse.jpg" alt="Surf Curse">
+                <p><i>SURF CURSE</i></p>
+                <p>Surf Curse is the indie rock recording project of Los Angeles based songwriters Nick Rattigan and Jacob Rubeck. Seeing Surf Curse live has become a right of passage for disaffected adolescence in the South-West while Rattigan and Rubeck have spent their formatives years between Las Vegas, Reno, and Los Angeles. Their new record, Heaven Surrounds You, is a coming of age epic, inspired by the many cult films they’ve cherished through out their young adulthood that are referenced across the album’s tracklist. Surf Curse’s songwriting and instrumental orchestration has matured on their third full length LP, adding layers of polish to their traditionally rough and visceral sound. Rattigan and Rubeck worked with veteran indie producer Jarvis Taveniere, carefully crafting their most lush and vulnerable record to date, during the fall of 2018. - Matthew James-Wilson
+                </p>
+            </section>
+
+            <details>
+                <summary>My Favorite books</summary>
+                <p>Giovanni's Room by James Baldwin</p>
+                <p>White Oleander by Janet Finch</p>
+            </details>
+
+            <br>
+
+            <footer>
+                <em>The end.</em>
+            </footer>
+
+            <address>
+                Created by Ashley Salazar <br>
+                On January 2020<br>
+                Much love.
+            <br>
+            </address>
+        </div>
+        <script src="./save.js"></script> 
+    </body>
+</html>

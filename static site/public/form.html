@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms</title>
+    </head>
+    <body>
+        <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+        <img src="" id="myImg" width="1" height="1"/>
+        
+        <!--to check if images are on-->
+        <input type="hidden" id="checkCSS" value="">
+
+        <!---this is the navigation bar-->
+        <nav>
+            <a href="index.html" tabindex="1">Return to Homepage</a>
+            <br>
+            <a href="images.html" tabindex="2">Images</a> <br>
+            <a href="table_and_lists.html" tabindex="3">Table and Lists</a> <br>
+            <a href="externals.html" tabindex="4">Externals</a> <br>
+            <a href="reportertest.html">View Data Collection Report</a><br>
+            <a href="https://analytics-a336c.firebaseapp.com/login">View Analytics</a>
+        </nav>
+        <hr>
+
+        <label for="site-search">Search the site:</label>
+        <input type="search" id="site-search" name="q"
+        aria-label="Search through site content">   
+        <button id="btnclick">Search</button> <br>
+
+
+        <label for="name">Your name:</label>
+        <input type="text" id="name" name="name" autocomplete="on" required
+        minlength="4" maxlength="8" size="10" autofocus>
+        <br>
+
+        <label for="email">Enter your personal email:</label>
+        <input type="email" id="email"
+            placeholder="something@youremail.com" required> 
+        <br>
+
+        <label for="phone">Enter your phone number:</label>
+        <input type="tel" id="phone" name="phone"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">        
+
+        Password: <input type="password" id="pass" name="password" value="Input here"
+                readonly>
+        <br>
+
+        <label for="tentacles">Hours spent on your phone(per day):</label>
+        <input type="number" id="tentacles" name="tentacles"
+        min="10" max="100">
+        <br> 
+
+        <form onsubmit="return false" oninput="o.value = parseInt(a.value) + parseInt(b.value)">
+            <input name="a" type="number" step="any"> +
+            <input name="b" type="number" step="any"> =
+            <output name="o"></output>
+          </form>
+          
+
+        <input type="time" id="appt" name="appt"
+        min="09:00" max="18:00" disabled>
+        <small title="I'm asking a question">The time you typically wake up</small>
+
+
+        <input type="range" id="volume" name="volume"
+        min="0" max="11">
+        <label for="volume">Your average volume</label>
+
+        <label for="meeting-time">Enter your birth time:</label>
+        <input type="datetime-local" id="meeting-time"
+            name="meeting-time" value="2018-06-12T19:30"
+            min="2018-06-07T00:00" max="2018-06-14T00:00">
+        <br>
+
+        <label for="start">Todays date:</label>
+        <input type="date" id="start" name="trip-start"
+        value="2018-07-22"
+        min="2018-01-01" max="2018-12-31">
+        <br>
+
+
+        <label for="url">Enter your twitter URL:</label>
+        <input type="url" name="url" id="url"
+               placeholder="https://example.com"
+               pattern="https://.*" size="30"
+               required> <br>
+        
+        
+        <label for="avatar">Choose a profile picture:</label>
+        <input type="file"
+        id="avatar" name="avatar"
+        accept="image/png, image/jpeg">
+        <br>
+
+        <label for="start">When did you adopt your cat:</label>
+        <input type="month" min="2018-03" value="2018-05">
+        <br>
+
+        <label>Choose your birthweek:</label>
+        <input type="week" name="week" id="camp-week"
+        min="2018-W18" max="2018-W26" required> <br>
+
+        <p>Choose your favorite color:</p>
+        <input type="color" id="color" name="color"
+                value="#e66465">
+        <label for="color">Color</label>
+        <br>
+
+        <input type="checkbox" id="glasses" name="glasses"
+                checked>
+        <label for="glasses">I wear glasses.</label>
+        <br>
+
+        <form action="scripts/submit.php" method="post">
+            <fieldset>
+                <legend>Choose your favorite season</legend>
+                <input type="radio" id="one" name="season">
+                <label for="one">Season 1</label><br>
+                <input type="radio" id="two" name="season">
+                <label for="two">Season 2</label><br>
+            </fieldset>
+
+            <label for="char-select">Choose the character you related to the most:</label>
+            <select name="characters" id="char-select">
+                <option value="">--Please choose a Character--</option>
+                <option value="Otis">Otis</option>
+                <option value="Maeve">Maeve</option>
+                <option value="Adam">Adam</option>
+                <option value="Aimee">Aimee</option>
+                <option value="Jeane">Jeane</option>
+                <option value="Ola">Ola</option>
+                <option value="Eric">Eric</option>
+                <option value="Jackson">Jackson</option>
+            </select>
+            <hr>
+
+            <label for="choice">Who was more appealing to you:</label>
+            <input list="flavors" id="choice" name="choice" />
+            
+            <datalist id="flavors">
+                <option value="Chocolate">
+                <option value="Coconut">
+                <option value="Mint">
+                <option value="Strawberry">
+                <option value="Vanilla">
+            </datalist>
+            <hr>
+
+            Almost done: <progress value="82" max="100">
+            </progress> <br>
+
+            <label for="style-select">Favorite Style:</label>
+            <select id="style-select" name="style">
+                <optgroup label="Masculine">
+                    <option>Otis</option>
+                    <option>Jackson</option>
+                    <option>Eric</option>
+                </optgroup>
+                <optgroup label="Feminine">
+                    <option>Maeve</option>
+                    <option>Ola</option>
+                    <option>Ruby</option>
+                </optgroup>
+            </select>
+            <hr>
+
+            <input id="prodId" name="prodId" type="hidden" value="xm234jq">
+
+            <label>Anything else you'd like to share?</label> <br>
+            <textarea id="story" name="story" rows="5" cols="33"> This is a safe space... </textarea>
+
+            <hr>
+            Coolness Level:
+            <meter id="cool"
+                min="0" max="100"
+                low="33" high="66" optimum="80"
+                value="99">
+                at 99/100
+            </meter>
+            <br>
+
+            <input type="image" height="50" src="files/lindsay.png" alt="lindsay lohan">
+
+            <hr>
+            <button type="submit">I'm Done!</button>
+            <br>
+
+            <label>Reset Form:</label>
+            <input type="reset" value="Reset">
+        </form>
+
+        <!--Will display the reported data-->
+        <section id="reporter"> </section>
+        <script src="./save.js"></script> 
+
+    </body>
+</html>
